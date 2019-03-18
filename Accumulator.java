@@ -27,7 +27,7 @@ public class Accumulator {
                This protection is implemented by the compiler.
                The following code violates the restriction:
               */
-            // [code that violates the restriction]
+            // list.get(el).startsWith(prefix);
 
             /*
              predicted error message: method not found
@@ -52,7 +52,7 @@ public class Accumulator {
                the operator to the code from Stumbling block 0:
              */
 
-            // [code that illustrates the use of the operator]
+            // if (list.get(el) instanceOf String && list.get(el).startsWith(prefix))
 
             /*
              predicted error message: method not found
@@ -76,7 +76,8 @@ public class Accumulator {
                the operator to the code from Stumbling block 0:
              */
 
-            // [code that illustrates the use of the operator]
+            // String stringElement = (String)list.get(el);
+            // if (stringElement.startsWith(prefix))
 
             /*
              predicted error message: method not found
@@ -90,7 +91,11 @@ public class Accumulator {
                elements in the list that support the method.
              */
 
-            // [working code here, finally]
+            if (list.get(el) instanceOf String) {
+              String stringElement = (String)list.get(el);
+              if (stringElement.startsWith(prefix))
+              result += stringElement + " "
+            }
 
         return result;
     }
@@ -100,8 +105,13 @@ public class Accumulator {
       @return a list of each of the Double elements
       from the \list whose value is "finite".
      */
-    public static List_inArraySlots finites(
-        List_inArraySlots list
-      ) {
+    public static List_inArraySlots finites(List_inArraySlots list) {
+      List_inArraySlots finiteElements = new List_inArraySlots();
+      for (int i = 0; i < list.size(); i++){
+        if (list.get(i) instanceof Double){
+          Double doubleElement = (Double)list.get(i);
+          if (!doubleElement.isInfinite())
+          finiteElements.add(doubleElement);
+        }
+      }
     }
-}
