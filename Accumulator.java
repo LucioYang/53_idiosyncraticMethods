@@ -24,30 +24,30 @@ public class Accumulator {
                Java protects a programmer against applying a method to
                elements in list when some elements of the list might
                omit support for a particular operation.
-               This protection is implemented by the ___________ (compiler? JVM?)
+               This protection is implemented by the compiler.
                The following code violates the restriction:
               */
             // [code that violates the restriction]
 
             /*
-             predicted error message:
-             actual error message:
+             predicted error message: method not found
+             actual error message: cannot find symbol
              */
 
 
             /* 4.  Workaround 0
                A programmer should expect there to be a way to
                work around the stumbling block, because
-               the ___________ (compiler? JVM?)
+               the JVM
                knows the type of an element.
-               Java's ___________ operator identifies the type
-               of an element to the ___________ (compiler? JVM?).
+               Java's instanceOf operator identifies the type
+               of an element to the compiler.
              */
 
 
             /* 5.  Stumbling block 1
                However, use of the operator alone is insufficient,
-               because the ___________ (compiler? JVM?)
+               because the compiler
                objects to the following code that adds use of
                the operator to the code from Stumbling block 0:
              */
@@ -55,14 +55,14 @@ public class Accumulator {
             // [code that illustrates the use of the operator]
 
             /*
-             predicted error message:
-             actual error message:
+             predicted error message: method not found
+             actual error message: cannot find symbol
              */
 
 
             /* 6. Workaround 1
-               Programmers use Java's _____________ operator
-               to tell the ___________ (compiler? JVM?)
+               Programmers use Java's cast operator
+               to tell the compiler
                that code uses a subclass's method on an object,
                even though the reference to the object is stored
                in a super-class variable.
@@ -71,7 +71,7 @@ public class Accumulator {
 
             /* 7. Stumbling block 2
                However, use of this operator alone is insufficient,
-               because the ___________ (compiler? JVM?)
+               because the compiler
                objects to the following code that adds use of
                the operator to the code from Stumbling block 0:
              */
@@ -79,8 +79,8 @@ public class Accumulator {
             // [code that illustrates the use of the operator]
 
             /*
-             predicted error message:
-             actual error message:
+             predicted error message: method not found
+             actual error message: cannot find symbol
              */
 
 
@@ -100,8 +100,8 @@ public class Accumulator {
       @return a list of each of the Double elements
       from the \list whose value is "finite".
      */
-    // public static List_inArraySlots finites(
-        // List_inArraySlots list
-      // ) {
-    // }
+    public static List_inArraySlots finites(
+        List_inArraySlots list
+      ) {
+    }
 }
